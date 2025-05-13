@@ -5,21 +5,21 @@
 class Minibridge < Formula
   desc "Minibridge securely connects Agents to MCP servers, exposing them to the internet while enabling optional integration with remote or local Policers for authentication, analysis, and transformation."
   homepage "https://github.com/acuvity/minibridge"
-  version "0.6.1"
+  version "0.6.2"
   license "Apache"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/acuvity/minibridge/releases/download/v0.6.1/minibridge_0.6.1_darwin_amd64"
-      sha256 "92f36946bfa41cf431d71fded5defffe0266e1258adec936d0012f65b0327eac"
+      url "https://github.com/acuvity/minibridge/releases/download/v0.6.2/minibridge_0.6.2_darwin_amd64.zip"
+      sha256 "41d45a1d08a31733dbeffab7f1813c963e3950bc881527796e0d9aa22c48251d"
 
       def install
         bin.install "minibridge"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/acuvity/minibridge/releases/download/v0.6.1/minibridge_0.6.1_darwin_arm64"
-      sha256 "6644d34c22adfb34882ab6f9a42c617d2fe5e5aa3df7a0a1f7538ec789a37d20"
+      url "https://github.com/acuvity/minibridge/releases/download/v0.6.2/minibridge_0.6.2_darwin_arm64.zip"
+      sha256 "d9e24eaba98517f7cebf15e7289c6e371109b9b4c7adaf6092f9adc89f0b8c0b"
 
       def install
         bin.install "minibridge"
@@ -30,8 +30,8 @@ class Minibridge < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/acuvity/minibridge/releases/download/v0.6.1/minibridge_0.6.1_linux_amd64"
-        sha256 "1a87db379c533d95480ca26d57988ec21d2899070dbe64c9d774347d0c056647"
+        url "https://github.com/acuvity/minibridge/releases/download/v0.6.2/minibridge_0.6.2_linux_amd64.zip"
+        sha256 "30de5073f9fc95b2bc3a6462a8a29e0c84af5ad8fdbf27c8b99f8c0bd4c91310"
 
         def install
           bin.install "minibridge"
@@ -40,8 +40,8 @@ class Minibridge < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/acuvity/minibridge/releases/download/v0.6.1/minibridge_0.6.1_linux_arm64"
-        sha256 "366c13a319c6b0f2168fc71a23819ab3228d42f8f992a6e7e0e8c516736e1e82"
+        url "https://github.com/acuvity/minibridge/releases/download/v0.6.2/minibridge_0.6.2_linux_arm64.zip"
+        sha256 "0ee5c5cc6d01f8112e30dbc23967f38f5a13503368c3b30b7eb6922a43c0b68b"
 
         def install
           bin.install "minibridge"
