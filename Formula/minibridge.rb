@@ -5,21 +5,21 @@
 class Minibridge < Formula
   desc "Minibridge securely connects Agents to MCP servers, exposing them to the internet while enabling optional integration with remote or local Policers for authentication, analysis, and transformation."
   homepage "https://github.com/acuvity/minibridge"
-  version "0.6.2"
+  version "0.7.0"
   license "Apache"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/acuvity/minibridge/releases/download/v0.6.2/minibridge_0.6.2_darwin_amd64.zip"
-      sha256 "41d45a1d08a31733dbeffab7f1813c963e3950bc881527796e0d9aa22c48251d"
+      url "https://github.com/acuvity/minibridge/releases/download/v0.7.0/minibridge_0.7.0_darwin_amd64.zip"
+      sha256 "53c8f63fa20c8ec5d5b3a4a1f2fe8f5dde160ee33f9ca861df0715c7eb630941"
 
       def install
         bin.install "minibridge"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/acuvity/minibridge/releases/download/v0.6.2/minibridge_0.6.2_darwin_arm64.zip"
-      sha256 "d9e24eaba98517f7cebf15e7289c6e371109b9b4c7adaf6092f9adc89f0b8c0b"
+      url "https://github.com/acuvity/minibridge/releases/download/v0.7.0/minibridge_0.7.0_darwin_arm64.zip"
+      sha256 "d40e432107d7183d44b86e29b218a1375181887f2440813c7426690fe7d39f8d"
 
       def install
         bin.install "minibridge"
@@ -28,24 +28,18 @@ class Minibridge < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/acuvity/minibridge/releases/download/v0.6.2/minibridge_0.6.2_linux_amd64.zip"
-        sha256 "30de5073f9fc95b2bc3a6462a8a29e0c84af5ad8fdbf27c8b99f8c0bd4c91310"
-
-        def install
-          bin.install "minibridge"
-        end
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/acuvity/minibridge/releases/download/v0.7.0/minibridge_0.7.0_linux_amd64.zip"
+      sha256 "97b1d94ddaa816d57da9528b632a74753a71e9cc5e0c79bda48d2a332e38aa45"
+      def install
+        bin.install "minibridge"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/acuvity/minibridge/releases/download/v0.6.2/minibridge_0.6.2_linux_arm64.zip"
-        sha256 "0ee5c5cc6d01f8112e30dbc23967f38f5a13503368c3b30b7eb6922a43c0b68b"
-
-        def install
-          bin.install "minibridge"
-        end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/acuvity/minibridge/releases/download/v0.7.0/minibridge_0.7.0_linux_arm64.zip"
+      sha256 "435c111d4b9f619d8dbf6467d2a364110a3ee9dc06e599ee9012ce536b166d63"
+      def install
+        bin.install "minibridge"
       end
     end
   end
